@@ -8,9 +8,10 @@
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
+
   <body{{ attributes.addClass('bg-light') }}>
 
     <!-- Top Banner -->
@@ -21,52 +22,54 @@
     {% endif %}
 
     <!-- Header: Logo + Navigation -->
-    <header class="container py-3">
+    <header class="container-fluid py-3">
       <div class="row align-items-center">
-        {% if page.logo %}
-          <div class="col-md-3">
-            {{ page.logo }}
-          </div>
-        {% endif %}
-        {% if page.navigation_menu %}
-          <nav class="col-md-9">
-            {{ page.navigation_menu }}
-          </nav>
-        {% endif %}
+        <div class="col-md-3 d-flex align-items-center gap-2">
+          <i class="bi bi-droplet-fill text-primary fs-3"></i>
+          {{ page.logo }}
+        </div>
+        <div class="col-md-9 d-flex justify-content-end align-items-center">
+          <i class="bi bi-list fs-4 me-2 d-md-none"></i>
+          {{ page.navigation_menu }}
+        </div>
       </div>
     </header>
 
     <!-- Main: Sidebar + Content -->
     <main class="container my-4">
       <div class="row">
-      <div class="mb-4">
-        <i class="bi bi-search me-2"></i><strong>Quick Search</strong>
-      </div>
         {% if page.left_sidebar %}
           <aside class="col-md-3 mb-3" role="complementary">
+            <div class="mb-3">
+              <i class="bi bi-search me-2"></i><strong>Quick Search</strong>
+            </div>
             {{ page.left_sidebar }}
           </aside>
         {% endif %}
 
         <section class="col-md-9 col-12 content bg-white p-4 rounded shadow-sm" role="main">
-        <h2><i class="bi bi-file-earmark-text me-2"></i>Main Content</h2>
+          <h2><i class="bi bi-file-earmark-text me-2"></i>Main Content</h2>
+
           {% if page.breadcrumb %}
-            <nav aria-label="breadcrumb">
+            <nav aria-label="breadcrumb" class="mb-3">
               <ol class="breadcrumb">
                 {{ page.breadcrumb }}
               </ol>
             </nav>
           {% endif %}
+
           {% if page.messages %}
             <div class="alert alert-info" role="alert">
               {{ page.messages }}
             </div>
           {% endif %}
+
           {% if page.content_header %}
             <header class="mb-3">
               {{ page.content_header }}
             </header>
           {% endif %}
+
           {{ page.content }}
         </section>
       </div>
@@ -75,11 +78,13 @@
     <!-- Footer -->
     {% if page.footer %}
       <footer class="region-footer bg-dark text-light py-4 mt-5 text-center">
-        <div class="container text-center">
-        <p><i class="bi bi-c-circle me-1"></i>Powered by Drupal | Made with <i class="bi bi-heart-fill text-danger"></i></p>
+        <div class="container">
+          <p class="mb-2">
+            <i class="bi bi-c-circle me-1"></i>Powered by Drupal |
+            Made with <i class="bi bi-heart-fill text-danger"></i>
+          </p>
           {{ page.footer }}
         </div>
-      
       </footer>
     {% endif %}
 
