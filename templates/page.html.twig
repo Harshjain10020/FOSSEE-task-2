@@ -39,6 +39,9 @@
     <!-- Main: Sidebar + Content -->
     <main class="container my-4">
       <div class="row">
+      <div class="mb-4">
+        <i class="bi bi-search me-2"></i><strong>Quick Search</strong>
+      </div>
         {% if page.left_sidebar %}
           <aside class="col-md-3 mb-3" role="complementary">
             {{ page.left_sidebar }}
@@ -46,6 +49,24 @@
         {% endif %}
 
         <section class="col-md-9 col-12 content bg-white p-4 rounded shadow-sm" role="main">
+        <h2><i class="bi bi-file-earmark-text me-2"></i>Main Content</h2>
+          {% if page.breadcrumb %}
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                {{ page.breadcrumb }}
+              </ol>
+            </nav>
+          {% endif %}
+          {% if page.messages %}
+            <div class="alert alert-info" role="alert">
+              {{ page.messages }}
+            </div>
+          {% endif %}
+          {% if page.content_header %}
+            <header class="mb-3">
+              {{ page.content_header }}
+            </header>
+          {% endif %}
           {{ page.content }}
         </section>
       </div>
@@ -54,7 +75,11 @@
     <!-- Footer -->
     {% if page.footer %}
       <footer class="region-footer bg-dark text-light py-4 mt-5 text-center">
-        {{ page.footer }}
+        <div class="container text-center">
+        <p><i class="bi bi-c-circle me-1"></i>Powered by Drupal | Made with <i class="bi bi-heart-fill text-danger"></i></p>
+          {{ page.footer }}
+        </div>
+      
       </footer>
     {% endif %}
 
