@@ -1,0 +1,16 @@
+name: My Olivero Subtheme
+type: theme
+description: A custom sub-theme based on Olivero.
+core_version_requirement: ^10
+base theme: olivero
+
+libraries:
+  - my_olivero_subtheme/global-styling
+
+regions:
+  top_banner: 'Top Banner'
+  logo: 'Logo'
+  navigation_menu: 'Navigation Menu'
+  left_sidebar: 'Left Sidebar'
+  content: 'Content'
+  footer: 'Footer'

@@ -1,0 +1,80 @@
+body {
+    background: linear-gradient(to right, #f6d365, #fda085);
+    font-family: 'Segoe UI', sans-serif;
+    color: #212529;
+    font-family: 'Segoe UI', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #fdfdfd;
+  }
+  
+  .region-top-banner {
+    background: #4A00E0;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .region-footer {
+    background: #0f2027;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .sidebar {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .region-content {
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Add responsive behavior */
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Make sure content doesn't overflow */
+  .main-content {
+    width: 100%;
+    overflow-wrap: break-word;
+  }
+  
+  /* Smooth hover effect for links */
+  a {
+    transition: color 0.2s ease-in-out;
+  }
+  a:hover {
+    color: #FF5722;
+  }
+  .content {
+    max-width: 100%;
+    word-wrap: break-word;
+    transition: all 0.3s ease-in-out;
+  }
+  .content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }  
+
+  @media (max-width: 768px) {
+    aside.sidebar {
+      margin-bottom: 1.5rem;
+    }
+  }
+  

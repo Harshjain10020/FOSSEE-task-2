@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ head_title }}</title>
+    <head-placeholder token="{{ placeholder_token }}">
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  </head>
+  <body{{ attributes.addClass('bg-light') }}>
+
+    <!-- Top Banner -->
+    {% if page.top_banner %}
+      <div class="region-top-banner py-2 bg-warning text-center">
+        {{ page.top_banner }}
+      </div>
+    {% endif %}
+
+    <!-- Header: Logo + Navigation -->
+    <header class="container py-3">
+      <div class="row align-items-center">
+        {% if page.logo %}
+          <div class="col-md-3">
+            {{ page.logo }}
+          </div>
+        {% endif %}
+        {% if page.navigation_menu %}
+          <nav class="col-md-9">
+            {{ page.navigation_menu }}
+          </nav>
+        {% endif %}
+      </div>
+    </header>
+
+    <!-- Main: Sidebar + Content -->
+    <main class="container my-4">
+      <div class="row">
+        {% if page.left_sidebar %}
+          <aside class="col-md-3 mb-3" role="complementary">
+            {{ page.left_sidebar }}
+          </aside>
+        {% endif %}
+
+        <section class="col-md-9 col-12 content bg-white p-4 rounded shadow-sm" role="main">
+          {{ page.content }}
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    {% if page.footer %}
+      <footer class="region-footer bg-dark text-light py-4 mt-5 text-center">
+        {{ page.footer }}
+      </footer>
+    {% endif %}
+
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>
