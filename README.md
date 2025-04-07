@@ -11,7 +11,7 @@ This project is a custom **Drupal 10 sub-theme** based on the **Olivero** theme.
 - 🧱 Custom block regions  
 - ✅ Responsive & accessible design  
 - 📦 Bootstrap Icons integration 
--  Preview : ![Screenshot of Theme](assets/Screenshot_7-4-2025_213521_localhost.jpg)
+-  Preview : ![Screenshot of Theme](assets/Screenshot_7-4-2025_213521_localhost.jpeg)
 ## Installation
 
 ### Prerequisites
