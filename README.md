@@ -1,4 +1,5 @@
 # fossee-task-2
+
 # Custom Drupal 10 Theme (Olivero Sub-theme)
 
 A custom responsive Drupal 10 theme featuring a clean, modern design with configurable regions and Tailwind CSS integration.
